@@ -1,0 +1,23 @@
+
+[
+    {
+    "name": "User",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "Date",
+    "type": "DATE",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "Building",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "Seats",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+    }
+]
