@@ -6,7 +6,7 @@ from oauth2client.appengine import AppAssertionCredentials
 import json
 
 url = 'https://www.googleapis.com/auth/bigquery'
-PROJECT_NUMBER = 'neogenesis-269611'
+PROJECT_NUMBER = 'XXXXXXXX'
 
 credentials = AppAssertionCredentials(scope=url)
 httpss = credentials.authorize(httplib2.Http())
