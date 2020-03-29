@@ -19,6 +19,6 @@ Technical features
 
 Future work
 - setup instructions
-- completing Terraform setup
+- change App Engine to Cloud Run and include in Terraform orchestration
 - beautifying visualisation
 - linking public Sheets template
