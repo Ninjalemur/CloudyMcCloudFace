@@ -9,7 +9,7 @@ Features
 - multiple simulataneous users
 
 Technical features
-- source code version control via Cloud Source Repositories
+- source code version control via Cloud Source Repositories + GitHub link
 - data storage in Big Query tables
 - data input by user through Google Spreadsheet
 - user actions communicated via AppScript to PubSub
