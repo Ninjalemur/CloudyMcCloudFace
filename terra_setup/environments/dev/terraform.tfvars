@@ -1,2 +1,2 @@
-project="terra-test-271907"
-repo="github_ninjalemur_terra-test-001"
+project="your_gcp_project_id"
+repo="your_cloud_repo_id"
