@@ -20,4 +20,11 @@ module "big_query" {
   env     = "${local.env}"
 }
 
+module "cloud_functions" {
+  source  = "../../modules/cloud_functions"
+  project = "${var.project}"
+  repo = "${var.repo}"
+  env     = "${local.env}"
+}
+
 
