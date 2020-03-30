@@ -55,7 +55,7 @@ class GetChartData(webapp2.RequestHandler):
 class GetSupplyDataActual(webapp2.RequestHandler):
   def get(self):
     inputData = self.request.get("inputData")
-    queryData = {'query':'SELECT User, Date, Building, SUM(Seats) as Seats FROM [neogenesis-269611:interface.source_supply] '
+    queryData = {'query':'SELECT User, Date, Building, SUM(Seats) as Seats FROM [interface.source_supply] '
     'GROUP BY User, Date, Building ORDER BY User, Date, Building'}
     tableData = bigquery_service.jobs()
     dataList = tableData.query(projectId=PROJECT_NUMBER,body=queryData).execute()
@@ -79,7 +79,7 @@ class GetSupplyDataActual(webapp2.RequestHandler):
 class GetSupplyDataForecast(webapp2.RequestHandler):
   def get(self):
     inputData = self.request.get("inputData")
-    queryData = {'query':'SELECT User, Date, Building, SUM(Seats) as Seats FROM [neogenesis-269611:interface.supply_forecast] '
+    queryData = {'query':'SELECT User, Date, Building, SUM(Seats) as Seats FROM [interface.supply_forecast] '
     'GROUP BY User, Date, Building ORDER BY User, Date, Building'}
     tableData = bigquery_service.jobs()
     dataList = tableData.query(projectId=PROJECT_NUMBER,body=queryData).execute()
@@ -103,8 +103,7 @@ class GetSupplyDataForecast(webapp2.RequestHandler):
 class GetChartData2(webapp2.RequestHandler):
   def get(self):
     inputData = self.request.get("inputData")
-    #queryData = {'query':'SELECT Date, SUM(Seats) as Seats FROM [neogenesis-269611:interface.source_supply] '
-    queryData = {'query':'SELECT Date, SUM(Seats) as Seats FROM [neogenesis-269611:interface.supply_forecast] '
+    queryData = {'query':'SELECT Date, SUM(Seats) as Seats FROM [interface.supply_forecast] '
     ' GROUP BY Date ORDER BY Date'}
     tableData = bigquery_service.jobs()
     dataList = tableData.query(projectId=PROJECT_NUMBER,body=queryData).execute()
@@ -128,8 +127,7 @@ class GetChartData2(webapp2.RequestHandler):
 class GetChartData3(webapp2.RequestHandler):
   def get(self):
     inputData = self.request.get("inputData")
-    #queryData = {'query':'SELECT Date, SUM(Seats) as Seats FROM [neogenesis-269611:interface.source_supply] '
-    queryData = {'query':'SELECT Date, SUM(Seats) as Seats FROM [neogenesis-269611:interface.supply_forecast] '
+    queryData = {'query':'SELECT Date, SUM(Seats) as Seats FROM [interface.supply_forecast] '
     'WHERE User = "'+inputData+'" GROUP BY Date ORDER BY Date'}
     tableData = bigquery_service.jobs()
     dataList = tableData.query(projectId=PROJECT_NUMBER,body=queryData).execute()
