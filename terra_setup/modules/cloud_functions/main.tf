@@ -18,6 +18,13 @@ resource "google_project_service" "api_cloudfunctions" {
 }
 
 
+resource "google_project_service" "api_sheets" {
+  project = "${var.project}"
+  service = "sheets.googleapis.com"
+
+  disable_dependent_services = false
+}
+
 resource "google_cloudfunctions_function" "function_calc" {
   name        = "ui-calc"
   description = "Function to take user inputs and perform calculations"
