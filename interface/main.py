@@ -83,6 +83,7 @@ def apply_plan(row):
 def calc(event,context,mock_data=False):
     url = event['attributes']['url']
     user_id = event['attributes']['id']
+    project_id = event['attributes']['project_id']
 
     ### pull supply inputs from sheets
     if mock_data == False:
@@ -199,7 +200,8 @@ def calc(event,context,mock_data=False):
     bqclient.query(deletion_query)
     
     ##### insert to supply forecast table
-    supply_forecast.to_gbq('interface.supply_forecast', 
+    supply_forecast.to_gbq('interface.supply_forecast',  
+                 project_id = project_id, 
                  chunksize=10000, 
                  if_exists='append',
                  table_schema=[
