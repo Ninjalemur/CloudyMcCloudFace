@@ -200,7 +200,6 @@ def calc(event,context,mock_data=False):
     
     ##### insert to supply forecast table
     supply_forecast.to_gbq('interface.supply_forecast', 
-                 'neogenesis-269611',
                  chunksize=10000, 
                  if_exists='append',
                  table_schema=[
