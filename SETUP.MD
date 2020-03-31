@@ -41,7 +41,7 @@ Setting up OAuth for user input spreadsheet
 - Take note of the spreadsheet ID(s) of your copy/copies. For example, the spreadsheet ID for the above spreadsheet is 1IU8aM9fteQ02u25JyToLKL3CMx9t3IfJTN4VIM9k-lA
 - open the script editor via Tools > Script Editor
 - Take note of the script ID. For example, in https://script.google.com/d/1234567890abcd/edit, the script ID is 1234567890abcd
-- Share each of your spreadsheets with ui-big-query-service@your_project_id.iam.gserviceaccount.com, replacing your_project_id with your project id
+- Share each of your spreadsheets with ui-big-query-service@your_project_id.iam.gserviceaccount.com, replacing your_project_id with your project id. Uncheck "Notify people"
 - Go to your GCP page and from the left side menu, select "APIs & Services" > "OAuth consent screen"
 - Select External (Unless you are a G Suite user deploying this for internal use, then select Internal)
 - Press Create
