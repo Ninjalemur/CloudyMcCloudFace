@@ -35,6 +35,7 @@ Deploying web application on Google App Engine
 - select the option for us-central and press enter
 - key in y and press enter when prompted
 - once deployed, you can visit https://your_project_id.appspot.com in your browser and view the chart
+- Key in User_A or User_B into the box and press enter to filter to that user's data
 
 Setting up OAuth for user input spreadsheet
 - Go to https://docs.google.com/spreadsheets/d/1IU8aM9fteQ02u25JyToLKL3CMx9t3IfJTN4VIM9k-lA/ and make a copy/copies of the spreadsheet
