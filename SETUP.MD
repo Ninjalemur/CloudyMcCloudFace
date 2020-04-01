@@ -49,7 +49,7 @@ Setting up OAuth for user input spreadsheet
 - Key in your Application name under "Application name"
 - Go to the bottom of the page and press Save
 - In the left side panel, select Credentials
-- Click Create
+- Click Create Credentials, and select OAuth ID
 - Select Web Application for Application type
 - Choose a name for your Credential under Name
 - Under Authorized redicrect URIs, key in https://script.google.com/macros/d/your_script_id/usercallback, replacing "your_spreadsheet_id" with your spreadsheet id from earlier
