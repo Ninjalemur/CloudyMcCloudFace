@@ -38,6 +38,8 @@ resource "google_cloudfunctions_function" "function_calc" {
     resource   = google_pubsub_topic.pubsub_calc.name
   }
 
+  service_account_email = "ui-big-query-service@${var.project}.iam.gserviceaccount.com"
+
   source_repository {
     url = join("",["https://source.developers.google.com/projects/","${var.project}","/repos/","${var.repo}","/moveable-aliases/master/paths/interface"])
   }
