@@ -18,7 +18,5 @@ Technical features
 - infrastructure orchestration via Terraform
 
 Future work
-- setup instructions
 - change App Engine to Cloud Run and include in Terraform orchestration
 - beautifying visualisation
-- linking public Sheets template
