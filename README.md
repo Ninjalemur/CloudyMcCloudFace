@@ -20,3 +20,4 @@ Technical features
 Future work
 - change App Engine to Cloud Run and include in Terraform orchestration
 - beautifying visualisation
+- change sheets to a web application
