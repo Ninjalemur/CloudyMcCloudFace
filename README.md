@@ -18,6 +18,6 @@ Technical features
 - infrastructure orchestration via Terraform
 
 Future work
-- change App Engine to Cloud Run and include in Terraform orchestration
+- change App Engine to Cloud Run/GKE/Firebase and include in Terraform orchestration
 - beautifying visualisation
-- change sheets to a web application
+- change sheets to a web application (Firebase?)
