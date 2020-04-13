@@ -20,4 +20,5 @@ Technical features
 Future work
 - change App Engine to Cloud Run/GKE/Firebase and include in Terraform orchestration
 - beautifying visualisation
-- change sheets to a web application (Firebase?)
+- change sheets to a web application (Firebase powered?)
+- add CI/CD with testing
