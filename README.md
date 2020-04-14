@@ -18,7 +18,8 @@ Technical features
 - infrastructure orchestration via Terraform
 
 Future work
-- change App Engine to Cloud Run/GKE/Firebase and include in Terraform orchestration
+- Containerise front end and include in Terraform orchestration
+- Change OAuth setup to Deployment Manager or shell script
 - beautifying visualisation
 - change sheets to a web application (Firebase powered?)
 - add CI/CD with testing
