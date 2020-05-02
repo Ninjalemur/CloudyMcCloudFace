@@ -25,3 +25,4 @@ Future work
 - change sheets to a web application (Firebase powered?)
 - add automated testing
 - migrate webapp2 web application to flask to allow containerisation
+- add terraform state storage to cloud bucket to allow multi user collaborative maintenance
