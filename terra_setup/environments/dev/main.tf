@@ -27,4 +27,10 @@ module "cloud_functions" {
   env     = "${local.env}"
 }
 
-
+module "cloud_build" {
+  source  = "../../modules/cloud_build"
+  project = "${var.project}"
+  repo = "${var.repo}"
+  env     = "${local.env}"
+  proj_number     = "${var.proj_number}"
+}

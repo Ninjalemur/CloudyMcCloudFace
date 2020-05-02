@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - ui-calc
+  - --runtime=python37
+  - --source=./interface
+  - --trigger-topic=calc
+  - --entry-point=calc

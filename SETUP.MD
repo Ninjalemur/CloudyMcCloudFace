@@ -19,8 +19,12 @@ Set up connected repository in Google Cloud Platform
 
 Setting up GCP infrastructure using Terraform
 - open your Cloud Shell
-- cd CloudyMcCloudFace/terra_setup/environments/dev
-- in terraform.tfvars, replace your_gcp_project_id with your gcp project id, and replace your_cloud_repo_id with the name of your Cloud Source repository (eg "github_username_cloudymccloudface")
+- cd ~/CloudyMcCloudFace
+- gcloud builds submit --config viz_v02/cloudbuild.yaml viz_v02/
+- enter "gcloud projects list"
+- note down your project id and project number
+- cd ~/CloudyMcCloudFace/terra_setup/environments/dev
+- in terraform.tfvars, replace your_gcp_project_id with your gcp project id, your_project_number with your project number, and replace your_cloud_repo_id with the name of your Cloud Source repository (eg "github_username_cloudymccloudface")
 - terraform init
 - terraform apply
 - key in "yes" and press enter
@@ -36,6 +40,11 @@ Deploying web application on Google App Engine
 - key in y and press enter when prompted
 - once deployed, you can visit https://your_project_id.appspot.com in your browser and view the chart
 - Key in User_A or User_B into the box and press enter to filter to that user's data
+
+Cloud Run Web Application
+- A hello world version of the web application has been set up with automatic builds
+- gcloud run services list --platform managed
+- access the application from the URL provided
 
 Setting up OAuth for user input spreadsheet
 - Go to https://docs.google.com/spreadsheets/d/1IU8aM9fteQ02u25JyToLKL3CMx9t3IfJTN4VIM9k-lA/ and make a copy/copies of the spreadsheet
@@ -59,7 +68,11 @@ Setting up OAuth for user input spreadsheet
 - Go back to your spreadsheet and open the script editor via Tools > Script Editor
 - Replace the CLIENT_ID and CLIENT secret in the service.gs script with your client id and client secret from your OAuth credential. If you have multiple input spreadsheets, each of them can use the same OAuth credential, provided you whitelisted each spreadsheet under Authorized redirect URIs earlier
 - Go to the call_home.gs script, and replace your_project_id with your project id, and sheet_URL with your spreadsheet ID
+- If you have multiple spreadsheets, you will need to change the user_id variable in each one to a unique string (eg User_A, User_B, etc)
 - Save using File > Save
 - The first time you use Refresh or Calc, permissions will need to be enabled. Enable them by following the prompts.
 
-You're all set up!
+You're all set up! 
+
+Enter some data in the Supply tab of the spreadsheet, then press Calc. 
+After 15-30 seconds, refresh the App Engine charts to see your updates by filtering to the user of the updates (eg "User_A")
