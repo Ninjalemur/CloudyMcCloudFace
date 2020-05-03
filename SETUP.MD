@@ -33,7 +33,7 @@ Setting up GCP infrastructure using Terraform
    eg "Error: googleapi: Error 403: Cloud Functions API has not been used in project 1234567890123 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=50744011024 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry., accessNotConfigured"
 
 Deploying web application on Google App Engine
-- cd ~/CloudyMcCloudFace/viz
+- cd ~/CloudyMcCloudFace/viz/
 - open app.py and replace your_project_id with your GCP project ID
 - gcloud app deploy app.yaml
 - select the option for us-central and press enter
