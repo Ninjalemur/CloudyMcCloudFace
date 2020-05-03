@@ -13,19 +13,19 @@ resource "google_project_iam_binding" "cloud_build_run_admin" {
   ]
 }
 
-resource "google_project_service" "api_compute" {
-  project = "${var.project}"
-  service = "compute.googleapis.com"
+#resource "google_project_service" "api_compute" {
+#  project = "${var.project}"
+#  service = "compute.googleapis.com"
 
-  disable_dependent_services = false
-}
+#  disable_dependent_services = false
+#}
 
-resource "google_project_service" "api_appengine" {
-  project = "${var.project}"
-  service = "appengine.googleapis.com"
+#resource "google_project_service" "api_appengine" {
+#  project = "${var.project}"
+#  service = "appengine.googleapis.com"
 
-  disable_dependent_services = false
-}
+#  disable_dependent_services = false
+#}
 
 data "google_compute_default_service_account" "default" {
 }
