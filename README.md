@@ -26,3 +26,4 @@ Future work
 - add automated testing
 - migrate webapp2 web application to flask to allow containerisation
 - add terraform state storage to cloud bucket to allow multi user collaborative maintenance
+- add terraform to be triggered by commits. add branch protection
