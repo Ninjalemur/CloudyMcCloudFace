@@ -10,20 +10,20 @@ resource "google_pubsub_topic" "pubsub_unload" {
   name = "unload"
 }
 
-resource "google_project_service" "api_cloudfunctions" {
-  project = "${var.project}"
-  service = "cloudfunctions.googleapis.com"
+# resource "google_project_service" "api_cloudfunctions" {
+#  project = "${var.project}"
+#  service = "cloudfunctions.googleapis.com"
 
-  disable_dependent_services = false
-}
+#  disable_dependent_services = false
+#}
 
 
-resource "google_project_service" "api_sheets" {
-  project = "${var.project}"
-  service = "sheets.googleapis.com"
+#resource "google_project_service" "api_sheets" {
+#  project = "${var.project}"
+#  service = "sheets.googleapis.com"
 
-  disable_dependent_services = false
-}
+#  disable_dependent_services = false
+#}
 
 resource "google_cloudfunctions_function" "function_calc" {
   name        = "ui-calc"
