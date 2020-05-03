@@ -13,3 +13,6 @@ echo "Sheets API: enabled"
 echo "Cloud Build API: enabling"
 gcloud services enable cloudbuild.googleapis.com
 echo "Cloud Build API: enabled"
+echo "Cloud Run API: enabling"
+gcloud services enable run.googleapis.com
+echo "Cloud Run API: enabled"
