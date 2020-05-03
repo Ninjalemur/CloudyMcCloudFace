@@ -31,8 +31,6 @@ Setting up GCP infrastructure using Terraform
 - terraform apply
 - key in "yes" and press enter
 - infrastructure may take a few minutes to provision
-- if you get an error regarding Cloud Functions APIs, run terraform apply again and press yes. This occasionally happens if the API was enabled just before utlisation and has not fully propagated yet
-   eg "Error: googleapi: Error 403: Cloud Functions API has not been used in project 1234567890123 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=50744011024 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry., accessNotConfigured"
 
 Deploying web application on Google App Engine
 - cd ~/CloudyMcCloudFace/viz/
