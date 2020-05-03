@@ -69,6 +69,7 @@ Setting up OAuth for user input spreadsheet
 - Replace the CLIENT_ID and CLIENT secret in the service.gs script with your client id and client secret from your OAuth credential. If you have multiple input spreadsheets, each of them can use the same OAuth credential, provided you whitelisted each spreadsheet under Authorized redirect URIs earlier
 - Go to the call_home.gs script, and replace your_project_id with your project id, and sheet_URL with your spreadsheet ID
 - If you have multiple spreadsheets, you will need to change the user_id variable in each one to a unique string (eg User_A, User_B, etc)
+- Note that each script is tied to a different spreadsheet, and will need a different spreadsheet ID
 - Save using File > Save
 - The first time you use Refresh or Calc, permissions will need to be enabled. Enable them by following the prompts.
 
