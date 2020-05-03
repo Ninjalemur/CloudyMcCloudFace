@@ -19,8 +19,8 @@ Set up connected repository in Google Cloud Platform
 
 Setting up GCP infrastructure using Terraform
 - open your Cloud Shell
-- cd ~/CloudyMcCloudFace
-- gcloud builds submit --config viz_v02/cloudbuild.yaml viz_v02/
+- cd ~/CloudyMcCloudFace/viz_v02/
+- gcloud builds submit --config cloudbuild.yaml .
 - enter "gcloud projects list"
 - note down your project id and project number
 - cd ~/CloudyMcCloudFace/terra_setup/environments/dev
